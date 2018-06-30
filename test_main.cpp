@@ -11,17 +11,18 @@ using namespace std;
 int main() {
 
 	IplImage* src = cvLoadImage("C:\\Users\\Amin\\Desktop\\face_fhd.jpg");
-	IplImage* dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
+//	IplImage* dst = cvCreateImage(cvGetSize(src), src->depth, src->nChannels);
 
-	AXI_STREAM src_axi, dst_axi;
-	IplImage2AXIvideo(src, src_axi);
-	pixelq_op(src_axi, dst_axi, src->height, src->width);
-	AXIvideo2IplImage(dst_axi, dst);
+//	AXI_STREAM src_axi, dst_axi;
+//	IplImage2AXIvideo(src, src_axi);
+//	pixelq_op(src_axi, dst_axi, src->height, src->width);
+//	AXIvideo2IplImage(dst_axi, dst);
 
-	cvSaveImage("C:\\Users\\Amin\\Desktop\\result_1080p.bmp", dst);
+//	cvSaveImage("C:\\Users\\Amin\\Desktop\\result_1080p.bmp", dst);
+	cvSaveImage("C:\\Users\\Amin\\Desktop\\result_1080p_copy.bmp", src); // saving without change
 	cvReleaseImage(&src);
-	cvReleaseImage(&dst);
+//	cvReleaseImage(&dst);
 
-	return (1);
+	return (0);
 
 }

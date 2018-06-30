@@ -14,8 +14,8 @@ void pixelq_op(AXI_STREAM& src_axi, AXI_STREAM& dst_axi, int rows, int cols) {
 #pragma HLS dataflow
 
 
-	hls::HaarLoadData face;
-	hls::Haar
+//	hls::HaarLoadData face;
+//	hls::Haar
 
 
 	hls::AXIvideo2Mat(src_axi, img);
